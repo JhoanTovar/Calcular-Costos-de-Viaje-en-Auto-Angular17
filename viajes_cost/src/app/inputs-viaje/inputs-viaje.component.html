@@ -1,0 +1,44 @@
+<div id="bc">
+    
+    <form #formulario="ngForm" (submit)="OnSubmit(formulario.value)">
+    
+        <div id="bloq1">
+            <div class="inp">
+                <label><p>Consumo del carro (Km/Galon):</p></label>
+                <input type="number" name="KmXGalon" min="0.1" ngModel>
+            </div>
+        
+            <div class="inp">
+                <label><p>Kilometros a recorrer:</p></label>
+                <input type="number" name="DistKil"  min="0.1" ngModel>
+            </div>
+        
+            <div class="inp">
+                <label><p>Numero de peajes:</p></label>
+                <input type="number" name="CantPeajes"  min="0.1" ngModel>
+            </div>
+        
+            <div class="inp"> 
+                <label><p>Costo del peaje:</p></label>
+                <input type="number" name="CostoPeaje"  min="0.1" ngModel>
+            </div>
+        
+            <div class="inp">
+                <label><p>Costo del galon de gasolina:</p> </label>
+                <input type="number" name="CostoGalon"  min="0.1" ngModel>
+            </div>
+        </div>
+        
+        <div id="enviar">
+            <input type="submit" value="Calcular costo de viaje">
+        </div>
+    
+    
+        
+        </form>
+    
+        <div id="resultado">
+             <label>Costo total del viaje: {{costo_final | currency}} COP</label> 
+        </div>
+    
+    </div>
